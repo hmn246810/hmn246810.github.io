@@ -11,18 +11,18 @@
         width: 80px;
     }
     h1{
-        color: black;
+        color: white;
         font-size: 20px;
     }
     th{
         font-size: 50px;
     }
     h2{
-        color: black;
+        color: white;
         font-size: 40px;
     }
     h3{
-        color: black;
+        color: white;
         font-size: 50px;
     }
 </style>
@@ -42,13 +42,13 @@
                 console.log(x)
             }
         })
-        var url = "https://wa.me/" + 85254008569 + "?text=Order:" + x + "Base:" + y
+        var url = "https://wa.me/" + 85254008569 + "?text=Order:" + x + "%2C%0A" + "Base:" + y
         window.open(url,'_blank')
     }
 </script>
 <meta charset="utf-8" name=" viewport" content=" width=device-width">    
 </head>
-<body style="background-color: wheat;">
+<body style="background-color: black;">
 <form name="order">  
     <fieldset>
     <legend><h3>Order Menu</h3></legend>
@@ -98,7 +98,7 @@
                     <td><input type="checkbox" class="basecheckbox" name="Wine" value="Wine"><h1>Wine</h1></td> 
                 </tr>
                 <tr>
-                    <td><button onclick="sendtowhatsapp()" style="width: 150px; height: 75px; background-color: wheat;font-size: 30px; color:black">Submit</button></td>
+                    <td><button onclick="sendtowhatsapp()" style="width: 150px; height: 75px; background-color: black;font-size: 30px; color:white;border: transparent;">Submit</button></td>
                 </tr>
             </tbody>
         </table>
