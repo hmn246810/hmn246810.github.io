@@ -1,0 +1,108 @@
+<html>   
+<head>
+<title>水煙</title>
+<style>
+    .checkbox{
+        height: 80px;
+        width: 80px;
+    }
+    .basecheckbox{
+        height: 80px;
+        width: 80px;
+    }
+    h1{
+        color: black;
+        font-size: 20px;
+    }
+    th{
+        font-size: 50px;
+    }
+    h2{
+        color: black;
+        font-size: 40px;
+    }
+    h3{
+        color: black;
+        font-size: 50px;
+    }
+</style>
+<script>
+    function sendtowhatsapp(){
+        var x = ""
+        var y = ""
+        document.querySelectorAll('.basecheckbox').forEach((box) => {
+            if (box.checked == true){
+                y = y + box.value + "%20"
+                console.log(y)
+            }
+        })
+        document.querySelectorAll('.checkbox').forEach((box) => {
+            if (box.checked == true){
+                x = x + box.value + "%20"
+                console.log(x)
+            }
+        })
+        var url = "https://wa.me/" + 85254008569 + "?text=Order:" + x + "Base:" + y
+        window.open(url,'_blank')
+    }
+</script>
+<meta charset="utf-8" name=" viewport" content=" width=device-width">    
+</head>
+<body style="background-color: aqua;">
+<form name="order">  
+    <fieldset>
+    <legend><h3>Order Menu</h3></legend>
+        <table cellpadding="10" cellspaceing="10">
+            <thead>
+                <tr>
+                    <th><h2>Fruity</h2></th>
+                    <th><h2>Creamy</h2></th>
+                    <th><h2>Tea</h2></th>
+                </tr>
+            </thead>
+            <tbody>  
+                <tr>
+                    <td><input type="checkbox" class="checkbox" name="BlueBerry" value="Blue Berry"><h1>Blue Berry</h1></td>
+                    <td><input type="checkbox" class="checkbox" name="MilkyRice" value="Milky Rice"><h1>Milky Rice</h1></td>
+                    <td><input type="checkbox" class="checkbox" name="Bergamonster" value="Bergamonster"><h1>Bergamonster</h1></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="checkbox" name="Kiwi" value="Kiwi"><h1>Kiwi</h1></td>
+                    <td><input type="checkbox" class="checkbox" name="VanillaCream" value="Vanilla Cream"><h1>Vanilla Cream</h1></td>
+                    <td><input type="checkbox" class="checkbox" name="Mint" value="Mint"><h1>Mint</h1></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="checkbox" name="Pineapple" value="Pineapple"><h1>Pineapple</h1></td>
+                    <td><input type="checkbox" class="checkbox" name="Cola" value="Cola"><h1>Cola</h1></td>
+                    <td><input type="checkbox" class="checkbox" name="Earlgrey" value="Earlgrey"><h1>Earl Grey</h1></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="checkbox" name="Peach" value="Peach"><h1>Peach</h1></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="checkbox" name="Lemon" value="Lemon"><h1>Lemon</h1></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="checkbox" name="Lychee" value="Lychee"><h1>Lychee</h1></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="checkbox" name="Cucunade" value="Cucunade"><h1>Cucunade</h1></td>
+                </tr>
+                <br>
+                <tr>
+                    <td><h2>Base</h2></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="basecheckbox" name="Tea" value="Tea"><h1>Tea</h1></td>
+                    <td><input type="checkbox" class="basecheckbox" name="Mike" value="Mike"><h1>Mike</h1></td>
+                    <td><input type="checkbox" class="basecheckbox" name="Wine" value="Wine"><h1>Wine</h1></td> 
+                </tr>
+                <tr>
+                    <td><button onclick="sendtowhatsapp()" style="width: 150px; height: 75px; background-color: wheat;font-size: 30px; color:black">Submit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</form>
+</body>
+</html>
